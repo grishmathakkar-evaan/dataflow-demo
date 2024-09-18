@@ -1,0 +1,10 @@
+config {
+  type: "table",
+  description: "This table aggregates the results",
+  name: "results"
+}
+select * from ${ref("aggr1")}
+union ALL
+select * from ${ref("aggr2")}
+union ALL
+select * from ${ref("aggr3")}

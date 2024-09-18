@@ -1,0 +1,5 @@
+config {
+  type: "table",
+  description: "This table calculates AVG from the source view",
+}
+select AVG(count) as avg_count from ${ref("source_view")}

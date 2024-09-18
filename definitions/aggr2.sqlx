@@ -1,0 +1,5 @@
+config {
+  type: "table",
+  description: "This table calculates count from the source view",
+}
+select count(fruit) as fruit_count from ${ref("source_view")}
