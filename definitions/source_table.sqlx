@@ -1,0 +1,14 @@
+config {
+  type: "table", // Creates a view in BigQuery. Try changing to "table" instead.
+  columns: {
+    number: "A description for the number column", // Column descriptions are pushed to BigQuery.
+  }
+}
+
+-- The rest of a SQLX file contains your SELECT statement used to create the table.
+
+SELECT 1 as number
+union all
+select 2 as number
+union all
+select 3 as number
