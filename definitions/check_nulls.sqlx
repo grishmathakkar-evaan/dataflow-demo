@@ -1,0 +1,5 @@
+config {
+    type: "assertion"
+}
+select * from ${ref("source_view1")}
+where fruit is null
