@@ -1,14 +1,27 @@
 config {
   type: "table", // Creates a view in BigQuery. Try changing to "table" instead.
-  columns: {
-    number: "A description for the number column", // Column descriptions are pushed to BigQuery.
-  }
+  name: "source",
+  description: "description of the table",
+  tags: ["favourite","least_liked"],
 }
 
--- The rest of a SQLX file contains your SELECT statement used to create the table.
+SELECT
+  "apples" AS fruit,
+  3 AS count
+UNION ALL
+SELECT
+  "oranges" AS fruit,
+  5 AS count
+UNION ALL
+SELECT
+  "pears" AS fruit,
+  1 AS count
+UNION ALL
+SELECT
+  "bananas" AS fruit,
+  0 AS count
+UNION ALL
+SELECT
+  "kiwi" AS fruit,
+  10 AS count
 
-SELECT 1 as number
-union all
-select 2 as number
-union all
-select 3 as number

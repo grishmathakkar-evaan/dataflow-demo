@@ -1,9 +1,0 @@
-config {
-  type: "table", // Creates a view in BigQuery. Try changing to "table" instead.
-    description: "A description for the first table", 
-
-}
-
--- The rest of a SQLX file contains your SELECT statement used to create the table.
-
-SELECT sum(number) as total from ${ref("source_table")}
